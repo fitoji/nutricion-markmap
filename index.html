@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Markmap</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/style.css"
+    />
+  </head>
+  <body>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.3-alpha.1/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/index.js"></script>
+    <script>
+      ;(() => {
+        setTimeout(() => {
+          const { markmap: q, mm: v } = window,
+            j = new q.Toolbar()
+          j.attach(v)
+          const we = j.render()
+          we.setAttribute('style', 'position:absolute;bottom:20px;right:20px'),
+            document.body.append(we)
+        })
+      })()
+    </script>
+    <script>
+      ;((f, d, h, u) => {
+        const g = f()
+        window.mm = g.Markmap.create(
+          'svg#mindmap',
+          (d || g.deriveOptions)(u),
+          h
+        )
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: 'Fisiopatología Aplicada a la Dietética',
+          children: [
+            {
+              content: '1. Introducción a la Fisiopatología',
+              children: [
+                {
+                  content: 'Definición de patología',
+                  children: [],
+                  payload: { lines: '3,4' },
+                },
+                {
+                  content: 'Definición de clínica',
+                  children: [],
+                  payload: { lines: '4,5' },
+                },
+                {
+                  content: 'Concepto de salud y enfermedad',
+                  children: [],
+                  payload: { lines: '5,6' },
+                },
+                {
+                  content: 'Clasificación de las enfermedades',
+                  children: [],
+                  payload: { lines: '6,7' },
+                },
+                {
+                  content: 'Fases de la enfermedad',
+                  children: [],
+                  payload: { lines: '7,8' },
+                },
+                {
+                  content: 'Organización corporal',
+                  children: [],
+                  payload: { lines: '8,9' },
+                },
+                {
+                  content: 'Términos relacionados con la anatomía',
+                  children: [],
+                  payload: { lines: '9,10' },
+                },
+                {
+                  content:
+                    'Divisiones anatómicas del cuerpo y cavidades corporales',
+                  children: [],
+                  payload: { lines: '10,11' },
+                },
+                {
+                  content: 'La célula',
+                  children: [],
+                  payload: { lines: '11,12' },
+                },
+                {
+                  content: 'Los tejidos',
+                  children: [],
+                  payload: { lines: '12,14' },
+                },
+              ],
+              payload: { lines: '2,3' },
+            },
+            {
+              content: '2. El Aparato Digestivo',
+              children: [
+                {
+                  content: 'Anatomía del aparato digestivo',
+                  children: [],
+                  payload: { lines: '15,16' },
+                },
+                {
+                  content: 'Cavidad bucal',
+                  children: [],
+                  payload: { lines: '16,17' },
+                },
+                {
+                  content: 'Faringe',
+                  children: [],
+                  payload: { lines: '17,18' },
+                },
+                {
+                  content: 'Esófago',
+                  children: [],
+                  payload: { lines: '18,19' },
+                },
+                {
+                  content: 'Estómago',
+                  children: [],
+                  payload: { lines: '19,20' },
+                },
+                {
+                  content: 'Intestino delgado',
+                  children: [],
+                  payload: { lines: '20,21' },
+                },
+                {
+                  content: 'Intestino grueso',
+                  children: [],
+                  payload: { lines: '21,22' },
+                },
+                {
+                  content: 'Anatomía del hígado',
+                  children: [],
+                  payload: { lines: '22,23' },
+                },
+                {
+                  content: 'Páncreas',
+                  children: [],
+                  payload: { lines: '23,24' },
+                },
+                {
+                  content: 'Irrigación arterial del tubo digestivo',
+                  children: [],
+                  payload: { lines: '24,25' },
+                },
+                {
+                  content:
+                    'Funciones secretoras del tubo digestivo y glándulas anejas',
+                  children: [],
+                  payload: { lines: '25,26' },
+                },
+                {
+                  content: 'Digestión y absorción en el tubo digestivo',
+                  children: [],
+                  payload: { lines: '26,27' },
+                },
+                {
+                  content: 'Progresión de los alimentos en el tubo digestivo',
+                  children: [],
+                  payload: { lines: '27,29' },
+                },
+              ],
+              payload: { lines: '14,15' },
+            },
+            {
+              content: '3. Fisiopatología del Tubo Digestivo',
+              children: [
+                {
+                  content: 'Patologías de la cavidad oral',
+                  children: [],
+                  payload: { lines: '30,31' },
+                },
+                {
+                  content: 'Trastornos de la deglución: disfagia',
+                  children: [],
+                  payload: { lines: '31,32' },
+                },
+                {
+                  content: 'Procesos esofágicos con disfagia',
+                  children: [],
+                  payload: { lines: '32,33' },
+                },
+                {
+                  content: 'Trastornos de la motilidad esofagogástrica',
+                  children: [],
+                  payload: { lines: '33,34' },
+                },
+                {
+                  content:
+                    'Alteraciones del intestino delgado e intestino grueso',
+                  children: [],
+                  payload: { lines: '34,35' },
+                },
+                {
+                  content:
+                    'Alteraciones en la absorción y secreción intestinal',
+                  children: [],
+                  payload: { lines: '35,37' },
+                },
+              ],
+              payload: { lines: '29,30' },
+            },
+            {
+              content:
+                '4. Fisiopatología de las Glándulas Anejas del Aparato Digestivo',
+              children: [
+                {
+                  content: 'Alteraciones del hígado',
+                  children: [],
+                  payload: { lines: '38,39' },
+                },
+                {
+                  content:
+                    'Alteraciones de las vías biliares y vesícula biliar',
+                  children: [],
+                  payload: { lines: '39,40' },
+                },
+                {
+                  content: 'Alteraciones del páncreas',
+                  children: [],
+                  payload: { lines: '40,42' },
+                },
+              ],
+              payload: { lines: '37,38' },
+            },
+            {
+              content: '5. Fisiopatología del Sistema Endocrino',
+              children: [
+                {
+                  content: 'Introducción',
+                  children: [],
+                  payload: { lines: '43,44' },
+                },
+                {
+                  content:
+                    'Anatomía y fisiología de algunas glándulas endocrinas',
+                  children: [],
+                  payload: { lines: '44,45' },
+                },
+                {
+                  content: 'Glándulas suprarrenales',
+                  children: [],
+                  payload: { lines: '45,46' },
+                },
+                {
+                  content: 'Patología de la glándula paratiroides',
+                  children: [],
+                  payload: { lines: '46,47' },
+                },
+                {
+                  content: 'Patología del eje hipotálamo-hipofisario',
+                  children: [],
+                  payload: { lines: '47,48' },
+                },
+                {
+                  content: 'Patología de las glándulas sexuales',
+                  children: [],
+                  payload: { lines: '48,50' },
+                },
+              ],
+              payload: { lines: '42,43' },
+            },
+            {
+              content: '6. El Aparato Urinario',
+              children: [
+                {
+                  content: 'Funciones del aparato urinario',
+                  children: [],
+                  payload: { lines: '51,52' },
+                },
+                {
+                  content: 'Anatomía e histología del aparato urinario',
+                  children: [],
+                  payload: { lines: '52,53' },
+                },
+                {
+                  content: 'Fisiología del aparato urinario',
+                  children: [],
+                  payload: { lines: '53,54' },
+                },
+                {
+                  content: 'Fisiopatología del riñón y vías urinarias',
+                  children: [],
+                  payload: { lines: '54,56' },
+                },
+              ],
+              payload: { lines: '50,51' },
+            },
+            {
+              content: '7. El Aparato Circulatorio',
+              children: [
+                {
+                  content:
+                    'Anatomía, histología y fisiología del aparato circulatorio',
+                  children: [],
+                  payload: { lines: '57,58' },
+                },
+                {
+                  content: 'Fisiología de la sangre y órganos hematopoyéticos',
+                  children: [],
+                  payload: { lines: '58,59' },
+                },
+                {
+                  content: 'Alteraciones de la sangre y la hematopoyesis',
+                  children: [],
+                  payload: { lines: '59,60' },
+                },
+                {
+                  content: 'Alteraciones del aparato cardiovascular',
+                  children: [],
+                  payload: { lines: '60,61' },
+                },
+                {
+                  content: 'Enfermedades arteriales y venosas',
+                  children: [],
+                  payload: { lines: '61,63' },
+                },
+              ],
+              payload: { lines: '56,57' },
+            },
+            {
+              content: '8. El Aparato Respiratorio',
+              children: [
+                {
+                  content: 'Introducción',
+                  children: [],
+                  payload: { lines: '64,65' },
+                },
+                {
+                  content: 'Fisiología del aparato respiratorio',
+                  children: [],
+                  payload: { lines: '65,66' },
+                },
+                {
+                  content: 'Fisiopatología pulmonar',
+                  children: [],
+                  payload: { lines: '66,67' },
+                },
+                {
+                  content: 'Síndromes ventilatorios',
+                  children: [],
+                  payload: { lines: '67,68' },
+                },
+                {
+                  content: 'Diagnóstico',
+                  children: [],
+                  payload: { lines: '68,70' },
+                },
+              ],
+              payload: { lines: '63,64' },
+            },
+            {
+              content: '9. Agua, Regulación Osmótica y Equilibrio Ácido-Base',
+              children: [
+                {
+                  content:
+                    'Clasificación y composición de los líquidos corporales',
+                  children: [],
+                  payload: { lines: '71,72' },
+                },
+                {
+                  content: 'Electrolitos corporales',
+                  children: [],
+                  payload: { lines: '72,73' },
+                },
+                {
+                  content: 'Balance diario de agua',
+                  children: [],
+                  payload: { lines: '73,74' },
+                },
+                {
+                  content: 'Osmolaridad de los líquidos corporales',
+                  children: [],
+                  payload: { lines: '74,75' },
+                },
+                {
+                  content: 'Trastornos del metabolismo hidrosalino',
+                  children: [],
+                  payload: { lines: '75,76' },
+                },
+                {
+                  content: 'Regulación del equilibrio ácido-base',
+                  children: [],
+                  payload: { lines: '76,77' },
+                },
+                {
+                  content: 'Anomalías clínicas del equilibrio ácido-base',
+                  children: [],
+                  payload: { lines: '77,79' },
+                },
+              ],
+              payload: { lines: '70,71' },
+            },
+            {
+              content: '10. Metabolismo de los Glúcidos',
+              children: [
+                {
+                  content: 'Conceptos básicos',
+                  children: [],
+                  payload: { lines: '80,81' },
+                },
+                {
+                  content: 'Catabolismo de los HC',
+                  children: [],
+                  payload: { lines: '81,82' },
+                },
+                {
+                  content: 'Anabolismo de los hidratos de carbono',
+                  children: [],
+                  payload: { lines: '82,83' },
+                },
+                {
+                  content: 'Metabolismo glucídico',
+                  children: [],
+                  payload: { lines: '83,85' },
+                },
+              ],
+              payload: { lines: '79,80' },
+            },
+            {
+              content: '11. Alteraciones del Metabolismo Glucídico',
+              children: [
+                {
+                  content: 'Diabetes mellitus',
+                  children: [],
+                  payload: { lines: '86,87' },
+                },
+                {
+                  content: 'Alteraciones metabólicas en la diabetes',
+                  children: [],
+                  payload: { lines: '87,88' },
+                },
+                {
+                  content: 'Síndrome hipoglucémico',
+                  children: [],
+                  payload: { lines: '88,89' },
+                },
+                {
+                  content: 'Enzimopatías glucídicas',
+                  children: [],
+                  payload: { lines: '89,91' },
+                },
+              ],
+              payload: { lines: '85,86' },
+            },
+            {
+              content: '12. Metabolismo de los Lípidos',
+              children: [
+                {
+                  content: 'Introducción',
+                  children: [],
+                  payload: { lines: '92,93' },
+                },
+                {
+                  content: 'Transporte de los lípidos',
+                  children: [],
+                  payload: { lines: '93,94' },
+                },
+                {
+                  content: 'Catabolismo de los lípidos (lipólisis)',
+                  children: [],
+                  payload: { lines: '94,95' },
+                },
+                {
+                  content: 'Anabolismo de los lípidos (lipogénesis)',
+                  children: [],
+                  payload: { lines: '95,96' },
+                },
+                {
+                  content: 'Metabolismo de lípidos',
+                  children: [],
+                  payload: { lines: '96,97' },
+                },
+                {
+                  content: 'Alteraciones del metabolismo lipídico',
+                  children: [],
+                  payload: { lines: '97,99' },
+                },
+              ],
+              payload: { lines: '91,92' },
+            },
+            {
+              content: '13. Fisiopatología de las Proteínas y Purinas',
+              children: [
+                {
+                  content: 'Metabolismo de proteínas',
+                  children: [],
+                  payload: { lines: '100,101' },
+                },
+                {
+                  content: 'Clasificación de aminoácidos',
+                  children: [],
+                  payload: { lines: '101,102' },
+                },
+                {
+                  content: 'Fisiopatología del metabolismo de los aminoácidos',
+                  children: [],
+                  payload: { lines: '102,103' },
+                },
+                {
+                  content:
+                    'Fisiopatología del metabolismo de las proteínas plasmáticas',
+                  children: [],
+                  payload: { lines: '103,104' },
+                },
+                {
+                  content: 'Amiloidosis',
+                  children: [],
+                  payload: { lines: '104,105' },
+                },
+              ],
+              payload: { lines: '99,100' },
+            },
+          ],
+          payload: { lines: '0,1' },
+        },
+        null
+      )
+    </script>
+  </body>
+</html>
